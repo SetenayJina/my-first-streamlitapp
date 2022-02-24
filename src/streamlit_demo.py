@@ -33,7 +33,7 @@ canton = left_column.selectbox("Choose a municipality", municipality)
 
 
 
-with open("data/gemeinden-geojson.geojson", encoding='utf-8') as response:
+with open("./data/raw/gemeinden-geojson.geojson", encoding='utf-8') as response:
     munis = json.load(response)
 
 sources_per_muni = df.groupby("municipality").size().reset_index(name="count")
